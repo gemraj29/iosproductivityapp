@@ -1,0 +1,57 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Swift
+      uses: maxim-t/setup-swift@v2
+      with:
+        swift-version: '5.9' # Specify your desired Swift version
+
+    - name: Install dependencies
+      run: swift package resolve
+
+    - name: Build project
+      run: swift build
+
+    - name: Run tests
+      run: swift test
+
+    # Add deployment steps here if needed, e.g., for TestFlight or App Store Connect
+    # - name: Deploy to TestFlight
+    #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    #   uses: apple-actions/install-cert-and-profile@v1
+    #   with:
+    #     cert-p12-file-path: 'path/to/your/certificate.p12'
+    #     cert-p12-password: ${{ secrets.P12_PASSWORD }}
+    #     profile-uuid: ${{ secrets.PROVISIONING_PROFILE_UUID }}
+    #   env:
+    #     APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+    #     APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+    #     APP_STORE_CONNECT_KEY_FILEPATH: ${{ secrets.APP_STORE_CONNECT_KEY_FILEPATH }}
+    #     APP_STORE_CONNECT_KEY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ISSUER_ID }}
+    # - name: Upload to TestFlight
+    #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    #   run: |
+    #     xcodebuild archive \
+    #       -workspace YourApp.xcworkspace \
+    #       -scheme YourAppScheme \
+    #       -destination 'generic/platform=iOS' \
+    #       -archivePath build/YourApp.xcarchive
+    #     xcodebuild -exportArchive \
+    #       -archivePath build/YourApp.xcarchive \
+    #       -exportOptionsPlist path/to/exportOptions.plist \
+    #       -exportPath build/
+    #     xcrun altool --upload-app --verbose --file build/YourApp.ipa --type ios --username 'your-apple-id@example.com' --password '${{ secrets.APP_SPECIFIC_PASSWORD }}'
+
