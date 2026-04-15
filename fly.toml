@@ -1,0 +1,45 @@
+# fly.toml file for iOSProductivity
+
+app = "ios-productivity-api" # Replace with your app name
+
+[[services]]
+  internal_port = 8000
+  protocol = "tcp"
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "connections"
+
+  [[services.ports]]
+    force_https = true
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 443
+
+[http_options]
+  compress_ விகி = true
+  response.header_mask = []
+
+[processes]
+
+[experimental]
+  auto_rollback_image = true
+  cmd = "python /app/main.py"
+  entrypoint = ["python", "/app/main.py"]
+  # Set this to the correct Python version if needed
+  # image = "python:3.10-slim"
+  # If you have a Dockerfile, you can use it like this:
+  # dockerfile = "Dockerfile"
+
+# Uncomment and configure if you are using a database
+# [[services.postgres_backups]]
+#   schedule = "0 0 * * *" # Daily backups at midnight
+
+# Uncomment and configure if you are using Redis
+# [[services.redis]]
+#   port = 6379
+#   internal_port = 6379
