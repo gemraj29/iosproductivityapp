@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_fastapi_routes",
+  "description": "Implement basic CRUD routes for tasks in the FastAPI backend.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

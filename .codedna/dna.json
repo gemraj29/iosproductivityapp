@@ -151,14 +151,882 @@
     }
   },
   "module_contexts": {},
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "scaffold_project_structure",
+      "description": "Create the base project directory structure following Clean Architecture and feature slicing.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "iOSProductivity"
+      ],
+      "files_created": [
+        "iOSProductivity/iOSProductivityApp.swift",
+        "iOSProductivity/ContentView.swift",
+        "iOSProductivity/iOSProductivity.xcodeproj/project.pbxproj",
+        "iOSProductivity/iOSProductivity.xcodeproj/xcshareddata/xcschemes/iOSProductivity.xcscheme",
+        "iOSProductivity/Info.plist",
+        "iOSProductivity/LaunchScreen.storyboard",
+        "iOSProductivity/SceneDelegate.swift",
+        "iOSProductivity/Bridging-Header.h",
+        "iOSProductivity/Assets.xcassets/AccentColor.colorset/Contents.json",
+        "iOSProductivity/iOSProductivity.entitlements",
+        "iOSProductivity/iOSProductivity.xcodeproj/xcworkspace/contents.xcworkspacedata",
+        "iOSProductivity/iOSProductivity.xcodeproj/project.xcworkspace/contents.xcworkspacedata"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 7999,
+      "created_at": "2026-04-15T03:27:39.484119+00:00",
+      "completed_at": "2026-04-15T03:28:18.388269+00:00",
+      "error": null,
+      "git_commit": "01facc8e"
+    },
+    {
+      "id": "implement_fastapi_routes",
+      "description": "Implement basic CRUD routes for tasks in the FastAPI backend.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "infrastructure/backend/api"
+      ],
+      "files_created": [
+        "infrastructure/backend/api/schemas/task_schema.py",
+        "infrastructure/backend/db/models/task_model.py",
+        "infrastructure/backend/db/crud/task_crud.py",
+        "infrastructure/backend/api/dependencies.py",
+        "infrastructure/backend/api/routers/task_router.py",
+        "infrastructure/backend/api/main.py"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1782,
+      "created_at": "2026-04-15T03:27:39.485233+00:00",
+      "completed_at": "2026-04-15T03:28:23.932682+00:00",
+      "error": null,
+      "git_commit": "9c6c72eb"
+    },
+    {
+      "id": "implement_database_migrations",
+      "description": "Implement initial database migrations for PostgreSQL.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "infrastructure/database"
+      ],
+      "files_created": [
+        "infrastructure/database/migrations/0001_initial_schema.sql"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2395,
+      "created_at": "2026-04-15T03:27:39.485255+00:00",
+      "completed_at": "2026-04-15T03:28:30.784374+00:00",
+      "error": null,
+      "git_commit": "3cfa7637"
+    },
+    {
+      "id": "test_domain_models",
+      "description": "Write unit tests for the domain models.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "domain/tests"
+      ],
+      "files_created": [
+        "domain/tests/TaskTests.swift",
+        "domain/tests/ProjectTests.swift",
+        "domain/tests/ProductivityStatsTests.swift",
+        "domain/tests/FocusSessionTests.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2361,
+      "created_at": "2026-04-15T03:27:39.485276+00:00",
+      "completed_at": "2026-04-15T03:28:36.559201+00:00",
+      "error": null,
+      "git_commit": "39c1d682"
+    },
+    {
+      "id": "test_application_use_cases",
+      "description": "Write unit tests for the application use cases.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "application/tests"
+      ],
+      "files_created": [
+        "application/tests/TaskUseCasesTests.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1858,
+      "created_at": "2026-04-15T03:27:39.485300+00:00",
+      "completed_at": "2026-04-15T03:28:41.607503+00:00",
+      "error": null,
+      "git_commit": "85acc639"
+    },
+    {
+      "id": "test_infrastructure_repositories",
+      "description": "Write unit tests for the infrastructure repository implementations.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [],
+      "target_modules": [
+        "infrastructure/tests"
+      ],
+      "files_created": [
+        "infrastructure/tests/TaskRepositoryTests.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1407,
+      "created_at": "2026-04-15T03:27:39.485323+00:00",
+      "completed_at": "2026-04-15T03:28:46.178278+00:00",
+      "error": null,
+      "git_commit": "a9a187e4"
+    },
+    {
+      "id": "scaffold_dockerfile",
+      "description": "Create a Dockerfile for the FastAPI backend.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "backend"
+      ],
+      "files_created": [
+        "Dockerfile"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 186,
+      "created_at": "2026-04-15T03:27:39.484168+00:00",
+      "completed_at": "2026-04-15T03:28:47.708236+00:00",
+      "error": null,
+      "git_commit": "cc926356"
+    },
+    {
+      "id": "scaffold_flyio_config",
+      "description": "Create Fly.io configuration files for deployment.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "infrastructure"
+      ],
+      "files_created": [
+        "fly.toml",
+        "requirements.txt"
+      ],
+      "files_modified": [
+        "Dockerfile"
+      ],
+      "checkpoint_path": null,
+      "tokens_used": 561,
+      "created_at": "2026-04-15T03:27:39.484676+00:00",
+      "completed_at": "2026-04-15T03:28:50.932492+00:00",
+      "error": null,
+      "git_commit": "9ccd3330"
+    },
+    {
+      "id": "scaffold_ios_app_delegate",
+      "description": "Scaffold the AppDelegate for the iOS application.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "presentation/ios"
+      ],
+      "files_created": [],
+      "files_modified": [
+        "iOSProductivity/iOSProductivityApp.swift",
+        "iOSProductivity/ContentView.swift",
+        "iOSProductivity/Info.plist",
+        "iOSProductivity/SceneDelegate.swift"
+      ],
+      "checkpoint_path": null,
+      "tokens_used": 1386,
+      "created_at": "2026-04-15T03:27:39.484714+00:00",
+      "completed_at": "2026-04-15T03:28:57.055657+00:00",
+      "error": null,
+      "git_commit": "d9fcde9f"
+    },
+    {
+      "id": "scaffold_android_main_activity",
+      "description": "Scaffold the MainActivity for the Android application.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "presentation/android"
+      ],
+      "files_created": [
+        "AndroidApp/app/src/main/java/com/example/iosproductivity/MainActivity.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 334,
+      "created_at": "2026-04-15T03:27:39.484762+00:00",
+      "completed_at": "2026-04-15T03:28:58.524660+00:00",
+      "error": null,
+      "git_commit": "92dc7d62"
+    },
+    {
+      "id": "scaffold_domain_models",
+      "description": "Scaffold core domain models (e.g., Task, User, Project).",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "domain"
+      ],
+      "files_created": [
+        "domain/models/Task.swift",
+        "domain/models/User.swift",
+        "domain/models/Project.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 498,
+      "created_at": "2026-04-15T03:27:39.484806+00:00",
+      "completed_at": "2026-04-15T03:29:00.348522+00:00",
+      "error": null,
+      "git_commit": "088ef7c8"
+    },
+    {
+      "id": "document_readme",
+      "description": "Create a README.md file with project overview and setup instructions.",
+      "task_type": "document",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "."
+      ],
+      "files_created": [
+        "README.md"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 665,
+      "created_at": "2026-04-15T03:27:39.485419+00:00",
+      "completed_at": "2026-04-15T03:29:02.530767+00:00",
+      "error": null,
+      "git_commit": "7ab11932"
+    },
+    {
+      "id": "document_architecture",
+      "description": "Document the Clean Architecture and feature slicing approach.",
+      "task_type": "document",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_project_structure"
+      ],
+      "target_modules": [
+        "docs"
+      ],
+      "files_created": [],
+      "files_modified": [
+        "docs/architecture.md"
+      ],
+      "checkpoint_path": null,
+      "tokens_used": 605,
+      "created_at": "2026-04-15T03:27:39.485441+00:00",
+      "completed_at": "2026-04-15T03:29:04.588507+00:00",
+      "error": null,
+      "git_commit": "db81fb8a"
+    },
+    {
+      "id": "test_fastapi_routes",
+      "description": "Write integration tests for the FastAPI backend routes.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [
+        "implement_fastapi_routes"
+      ],
+      "target_modules": [
+        "infrastructure/backend/tests"
+      ],
+      "files_created": [
+        "infrastructure/backend/tests/test_main.py"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 586,
+      "created_at": "2026-04-15T03:27:39.485357+00:00",
+      "completed_at": "2026-04-15T03:29:06.915180+00:00",
+      "error": null,
+      "git_commit": "a1b93dca"
+    },
+    {
+      "id": "scaffold_ios_app_entry_point",
+      "description": "Scaffold the main App struct for the SwiftUI iOS application.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_ios_app_delegate"
+      ],
+      "target_modules": [
+        "presentation/ios"
+      ],
+      "files_created": [],
+      "files_modified": [
+        "iOSProductivity/iOSProductivityApp.swift"
+      ],
+      "checkpoint_path": null,
+      "tokens_used": 111,
+      "created_at": "2026-04-15T03:27:39.484739+00:00",
+      "completed_at": "2026-04-15T03:29:07.757705+00:00",
+      "error": null,
+      "git_commit": "bf0c126d"
+    },
+    {
+      "id": "scaffold_android_app_entry_point",
+      "description": "Scaffold the main Application class for the Jetpack Compose Android application.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_android_main_activity"
+      ],
+      "target_modules": [
+        "presentation/android"
+      ],
+      "files_created": [
+        "presentation/android/app/src/main/java/com/example/iosproductivity/MainActivity.kt",
+        "presentation/android/app/src/main/java/com/example/iosproductivity/ui/theme/Theme.kt",
+        "presentation/android/app/src/main/java/com/example/iosproductivity/ui/theme/Type.kt",
+        "presentation/android/app/src/main/java/com/example/iosproductivity/ui/theme/Color.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2528,
+      "created_at": "2026-04-15T03:27:39.484784+00:00",
+      "completed_at": "2026-04-15T03:39:35.392288+00:00",
+      "error": "litellm.ServiceUnavailableError: GeminiException - {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "git_commit": "c3f3de85"
+    },
+    {
+      "id": "scaffold_application_use_cases",
+      "description": "Scaffold base use case interfaces/abstract classes.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_domain_models"
+      ],
+      "target_modules": [
+        "application"
+      ],
+      "files_created": [
+        "application/src/commonMain/kotlin/io/iosproductivty/application/usecases/UseCase.kt",
+        "application/src/commonMain/kotlin/io/iosproductivty/application/usecases/NoInputUseCase.kt",
+        "application/src/commonMain/kotlin/io/iosproductivty/application/usecases/NoOutputUseCase.kt",
+        "application/src/commonMain/kotlin/io/iosproductivty/application/usecases/NoInputNoOutputUseCase.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 823,
+      "created_at": "2026-04-15T03:27:39.484833+00:00",
+      "completed_at": "2026-04-15T03:34:08.156793+00:00",
+      "error": null,
+      "git_commit": "628614e0"
+    },
+    {
+      "id": "scaffold_infrastructure_repositories",
+      "description": "Scaffold base repository interfaces.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_domain_models"
+      ],
+      "target_modules": [
+        "infrastructure"
+      ],
+      "files_created": [
+        "infrastructure/src/main/kotlin/com/example/iosproductivitiy/infrastructure/persistence/TaskRepository.kt",
+        "infrastructure/src/main/kotlin/com/example/iosproductivitiy/infrastructure/persistence/UserRepository.kt",
+        "infrastructure/src/main/kotlin/com/example/iosproductivitiy/infrastructure/persistence/ProjectRepository.kt",
+        "infrastructure/src/main/kotlin/com/example/iosproductivitiy/infrastructure/persistence/FocusSessionRepository.kt",
+        "infrastructure/src/main/kotlin/com/example/iosproductivitiy/infrastructure/persistence/ProductivityStatsRepository.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 669,
+      "created_at": "2026-04-15T03:27:39.484855+00:00",
+      "completed_at": "2026-04-15T03:34:18.698967+00:00",
+      "error": null,
+      "git_commit": "7ec56829"
+    },
+    {
+      "id": "setup_ci_cd",
+      "description": "Set up basic CI/CD pipeline configuration (e.g., GitHub Actions).",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "test_fastapi_routes",
+        "implement_database_migrations"
+      ],
+      "target_modules": [
+        "github/workflows"
+      ],
+      "files_created": [
+        ".github/workflows/main.yml"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 661,
+      "created_at": "2026-04-15T03:27:39.485464+00:00",
+      "completed_at": "2026-04-15T03:34:29.876076+00:00",
+      "error": null,
+      "git_commit": "82589597"
+    },
+    {
+      "id": "scaffold_presentation_ios_design_system",
+      "description": "Scaffold the iOS Design System components and theme using SwiftUI, referencing design tokens.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_ios_app_entry_point"
+      ],
+      "target_modules": [
+        "presentation/ios/common/designsystem"
+      ],
+      "files_created": [
+        "presentation/ios/common/designsystem/Color+AppColors.swift",
+        "presentation/ios/common/designsystem/Font+AppFonts.swift",
+        "presentation/ios/common/designsystem/Spacing+AppSpacing.swift",
+        "presentation/ios/common/designsystem/Theme/AppTheme.swift",
+        "presentation/ios/common/designsystem/Theme/AppThemeProvider.swift",
+        "presentation/ios/common/designsystem/Components/AppButton.swift",
+        "presentation/ios/common/designsystem/Components/AppCard.swift",
+        "presentation/ios/common/designsystem/Components/AppTextField.swift",
+        "presentation/ios/common/designsystem/Components/AppTypography.swift",
+        "presentation/ios/common/designsystem/Components/AppIcon.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 5098,
+      "created_at": "2026-04-15T03:27:39.484922+00:00",
+      "completed_at": "2026-04-15T03:34:39.851982+00:00",
+      "error": null,
+      "git_commit": "db0e7856"
+    },
+    {
+      "id": "scaffold_presentation_android_design_system",
+      "description": "Scaffold the Android Design System components and theme using Jetpack Compose, referencing design tokens.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_android_app_entry_point"
+      ],
+      "target_modules": [
+        "presentation/android/common/designsystem"
+      ],
+      "files_created": [
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Color.kt",
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Shape.kt",
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Spacing.kt",
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Theme.kt",
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Type.kt",
+        "presentation/android/common/designsystem/src/main/java/com/example/iosproductivity/designsystem/Component.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 5689,
+      "created_at": "2026-04-15T03:27:39.484943+00:00",
+      "completed_at": "2026-04-15T03:39:52.454346+00:00",
+      "error": null,
+      "git_commit": "49b045c0"
+    },
+    {
+      "id": "scaffold_infrastructure_database_config",
+      "description": "Scaffold database configuration for PostgreSQL and CoreData/Room.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_infrastructure_repositories"
+      ],
+      "target_modules": [
+        "infrastructure"
+      ],
+      "files_created": [
+        "infrastructure/database/config/DatabaseConfig.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 578,
+      "created_at": "2026-04-15T03:27:39.484877+00:00",
+      "completed_at": "2026-04-15T03:34:41.997936+00:00",
+      "error": null,
+      "git_commit": "4ef55b3d"
+    },
+    {
+      "id": "implement_task_list_view_ios",
+      "description": "Implement the Task List view for iOS using SwiftUI, referencing design tokens and stitch/task_list/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/tasklist"
+      ],
+      "files_created": [
+        "iOSProductivity/iOSProductivity/Presentation/TaskList/TaskListRowView.swift",
+        "iOSProductivity/iOSProductivity/Presentation/TaskList/TaskListScreen.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1688,
+      "created_at": "2026-04-15T03:27:39.484966+00:00",
+      "completed_at": "2026-04-15T03:34:47.878243+00:00",
+      "error": null,
+      "git_commit": "4a46edfc"
+    },
+    {
+      "id": "implement_productivity_stats_view_ios",
+      "description": "Implement the Productivity Stats view for iOS using SwiftUI, referencing design tokens and stitch/productivity_stats/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/productivitystats"
+      ],
+      "files_created": [
+        "iOSProductivity/iOSProductivity/Presentation/Features/ProductivityStats/ProductivityStatsView.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1309,
+      "created_at": "2026-04-15T03:27:39.485017+00:00",
+      "completed_at": "2026-04-15T03:34:52.023790+00:00",
+      "error": null,
+      "git_commit": "99f60096"
+    },
+    {
+      "id": "implement_calendar_view_ios",
+      "description": "Implement the Calendar view for iOS using SwiftUI, referencing design tokens and stitch/calendar_view/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/calendar"
+      ],
+      "files_created": [
+        "presentation/ios/features/calendar/CalendarView.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2355,
+      "created_at": "2026-04-15T03:27:39.485059+00:00",
+      "completed_at": "2026-04-15T03:35:00.665222+00:00",
+      "error": null,
+      "git_commit": "e5cee335"
+    },
+    {
+      "id": "implement_dashboard_view_ios",
+      "description": "Implement the Dashboard view for iOS using SwiftUI, referencing design tokens and stitch/dashboard/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/dashboard"
+      ],
+      "files_created": [
+        "presentation/ios/features/dashboard/DashboardView.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1349,
+      "created_at": "2026-04-15T03:27:39.485099+00:00",
+      "completed_at": "2026-04-15T03:35:05.143349+00:00",
+      "error": null,
+      "git_commit": "846183b4"
+    },
+    {
+      "id": "implement_task_editor_view_ios",
+      "description": "Implement the Task Editor view for iOS using SwiftUI, referencing design tokens and stitch/task_editor/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/taskeditor"
+      ],
+      "files_created": [
+        "presentation/ios/features/taskeditor/TaskEditorView.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2032,
+      "created_at": "2026-04-15T03:27:39.485140+00:00",
+      "completed_at": "2026-04-15T03:35:13.152538+00:00",
+      "error": null,
+      "git_commit": "8196c779"
+    },
+    {
+      "id": "implement_focus_mode_view_ios",
+      "description": "Implement the Focus Mode view for iOS using SwiftUI, referencing design tokens and stitch/focus_mode/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/features/focusmode"
+      ],
+      "files_created": [
+        "iOSProductivity/iOSProductivity/Features/FocusMode/FocusModeView.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1336,
+      "created_at": "2026-04-15T03:27:39.485184+00:00",
+      "completed_at": "2026-04-15T03:35:18.615402+00:00",
+      "error": null,
+      "git_commit": "8feff4e0"
+    },
+    {
+      "id": "test_ios_ui_components",
+      "description": "Write unit tests for the iOS SwiftUI UI components.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_ios_design_system"
+      ],
+      "target_modules": [
+        "presentation/ios/common/designsystem/tests"
+      ],
+      "files_created": [
+        "ios_productivity/ios/common/designsystem/tests/ButtonTests.swift"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1182,
+      "created_at": "2026-04-15T03:27:39.485378+00:00",
+      "completed_at": "2026-04-15T03:35:22.500201+00:00",
+      "error": null,
+      "git_commit": "36e84969"
+    },
+    {
+      "id": "implement_task_list_view_android",
+      "description": "Implement the Task List view for Android using Jetpack Compose, referencing design tokens and stitch/task_list/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/tasklist"
+      ],
+      "files_created": [
+        "presentation/android/features/tasklist/src/main/java/com/example/iosproductivity/tasklist/TaskListScreen.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1118,
+      "created_at": "2026-04-15T03:27:39.484993+00:00",
+      "completed_at": "2026-04-15T03:39:56.695206+00:00",
+      "error": null,
+      "git_commit": "0dfb354c"
+    },
+    {
+      "id": "implement_productivity_stats_view_android",
+      "description": "Implement the Productivity Stats view for Android using Jetpack Compose, referencing design tokens and stitch/productivity_stats/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/productivitystats"
+      ],
+      "files_created": [
+        "productivitystats/src/main/java/com/example/iosproductivity/productivitystats/ProductivityStatsView.kt",
+        "productivitystats/src/main/java/com/example/iosproductivity/productivitystats/DesignTokens.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2467,
+      "created_at": "2026-04-15T03:27:39.485039+00:00",
+      "completed_at": "2026-04-15T03:40:06.831029+00:00",
+      "error": null,
+      "git_commit": "0bbc2951"
+    },
+    {
+      "id": "implement_calendar_view_android",
+      "description": "Implement the Calendar view for Android using Jetpack Compose, referencing design tokens and stitch/calendar_view/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/calendar"
+      ],
+      "files_created": [
+        "android/features/calendar/src/main/java/com/example/iosproductivity/calendar/CalendarView.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1460,
+      "created_at": "2026-04-15T03:27:39.485079+00:00",
+      "completed_at": "2026-04-15T03:40:11.226011+00:00",
+      "error": null,
+      "git_commit": "6005ccfd"
+    },
+    {
+      "id": "implement_dashboard_view_android",
+      "description": "Implement the Dashboard view for Android using Jetpack Compose, referencing design tokens and stitch/dashboard/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/dashboard"
+      ],
+      "files_created": [
+        "presentation/android/features/dashboard/src/main/java/com/example/iosproductivity/dashboard/DashboardScreen.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1970,
+      "created_at": "2026-04-15T03:27:39.485120+00:00",
+      "completed_at": "2026-04-15T03:40:17.894050+00:00",
+      "error": null,
+      "git_commit": "0b61fcf6"
+    },
+    {
+      "id": "implement_task_editor_view_android",
+      "description": "Implement the Task Editor view for Android using Jetpack Compose, referencing design tokens and stitch/task_editor/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/taskeditor"
+      ],
+      "files_created": [
+        "presentation/android/features/taskeditor/src/main/java/com/example/iosproductivity/taskeditor/TaskEditorScreen.kt",
+        "presentation/android/features/taskeditor/src/main/java/com/example/iosproductivity/taskeditor/ui/theme/Color.kt",
+        "presentation/android/features/taskeditor/src/main/java/com/example/iosproductivity/taskeditor/ui/theme/Theme.kt",
+        "presentation/android/features/taskeditor/src/main/java/com/example/iosproductivity/taskeditor/ui/theme/Typography.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 4227,
+      "created_at": "2026-04-15T03:27:39.485163+00:00",
+      "completed_at": "2026-04-15T03:40:31.981467+00:00",
+      "error": null,
+      "git_commit": "df1fb69d"
+    },
+    {
+      "id": "implement_focus_mode_view_android",
+      "description": "Implement the Focus Mode view for Android using Jetpack Compose, referencing design tokens and stitch/focus_mode/code.html.",
+      "task_type": "implement",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/features/focusmode"
+      ],
+      "files_created": [
+        "presentation/android/features/focusmode/src/main/java/com/example/iosproductivity/focusmode/FocusModeScreen.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1751,
+      "created_at": "2026-04-15T03:27:39.485210+00:00",
+      "completed_at": "2026-04-15T03:40:37.832204+00:00",
+      "error": null,
+      "git_commit": "1900091d"
+    },
+    {
+      "id": "test_android_ui_components",
+      "description": "Write unit tests for the Android Jetpack Compose UI components.",
+      "task_type": "test",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_presentation_android_design_system"
+      ],
+      "target_modules": [
+        "presentation/android/common/designsystem/tests"
+      ],
+      "files_created": [
+        "android/common/designsystem/src/test/java/com/example/iosproductiv/designsystem/components/ButtonTest.kt",
+        "android/common/designsystem/src/test/java/com/example/iosproductiv/designsystem/components/CardTest.kt",
+        "android/common/designsystem/src/test/java/com/example/iosproductiv/designsystem/components/CheckboxTest.kt",
+        "android/common/designsystem/src/test/java/com/example/iosproductiv/designsystem/components/TextFieldTest.kt"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 2051,
+      "created_at": "2026-04-15T03:27:39.485398+00:00",
+      "completed_at": "2026-04-15T03:40:44.252523+00:00",
+      "error": null,
+      "git_commit": "826e1c56"
+    },
+    {
+      "id": "scaffold_infrastructure_fastapi_app",
+      "description": "Scaffold the base FastAPI application.",
+      "task_type": "scaffold",
+      "status": "completed",
+      "dependencies": [
+        "scaffold_infrastructure_database_config"
+      ],
+      "target_modules": [
+        "infrastructure/backend"
+      ],
+      "files_created": [
+        "infrastructure/backend/app/main.py",
+        "infrastructure/backend/app/Dockerfile",
+        "infrastructure/backend/app/requirements.txt",
+        "infrastructure/backend/app/alembic/env.py",
+        "infrastructure/backend/app/alembic/versions/xxxxxxxxxxxxxx_create_users_table.py",
+        "infrastructure/backend/app/alembic.ini"
+      ],
+      "files_modified": [],
+      "checkpoint_path": null,
+      "tokens_used": 1442,
+      "created_at": "2026-04-15T03:27:39.484901+00:00",
+      "completed_at": "2026-04-15T03:35:30.239326+00:00",
+      "error": null,
+      "git_commit": "fb0a03d1"
+    }
+  ],
   "current_task_id": null,
   "llm_provider": "gemini",
   "llm_model": "gemini/gemini-2.5-flash-lite",
   "token_budget_per_task": 8000,
   "context_token_limit": 64000,
   "created_at": "2026-04-15T03:27:26.738698+00:00",
-  "updated_at": "2026-04-15T03:27:26.744694+00:00",
+  "updated_at": "2026-04-15T03:40:44.252583+00:00",
   "git_repo_url": null,
   "design_files": [
     "stitch/task_list/screen.png",

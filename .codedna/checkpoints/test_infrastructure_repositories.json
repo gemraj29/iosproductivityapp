@@ -1,0 +1,6 @@
+{
+  "task_id": "test_infrastructure_repositories",
+  "description": "Write unit tests for the infrastructure repository implementations.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

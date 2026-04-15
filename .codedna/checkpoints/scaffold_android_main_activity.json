@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_android_main_activity",
+  "description": "Scaffold the MainActivity for the Android application.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_android_app_entry_point",
+  "description": "Scaffold the main Application class for the Jetpack Compose Android application.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

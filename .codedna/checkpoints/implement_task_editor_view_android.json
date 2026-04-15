@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_task_editor_view_android",
+  "description": "Implement the Task Editor view for Android using Jetpack Compose, referencing design tokens and stitch/task_editor/code.html.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

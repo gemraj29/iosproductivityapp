@@ -1,0 +1,6 @@
+{
+  "task_id": "document_architecture",
+  "description": "Document the Clean Architecture and feature slicing approach.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

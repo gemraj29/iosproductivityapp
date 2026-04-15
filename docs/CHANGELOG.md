@@ -1,0 +1,42 @@
+# iOSProductivity — Changelog
+
+_Generated 2026-04-15_
+
+- `826e1c56` feat(test_android_ui_components): Write unit tests for the Android Jetpack Compose UI components.
+- `1900091d` feat(implement_focus_mode_view_android): Implement the Focus Mode view for Android using Jetpack Compose, referencing design tokens and stitch/focus_mode/code.html.
+- `df1fb69d` feat(implement_task_editor_view_android): Implement the Task Editor view for Android using Jetpack Compose, referencing design tokens and stitch/task_editor/code.html.
+- `0b61fcf6` feat(implement_dashboard_view_android): Implement the Dashboard view for Android using Jetpack Compose, referencing design tokens and stitch/dashboard/code.html.
+- `6005ccfd` feat(implement_calendar_view_android): Implement the Calendar view for Android using Jetpack Compose, referencing design tokens and stitch/calendar_view/code.html.
+- `0bbc2951` feat(implement_productivity_stats_view_android): Implement the Productivity Stats view for Android using Jetpack Compose, referencing design tokens and stitch/productivity_stats/code.html.
+- `0dfb354c` feat(implement_task_list_view_android): Implement the Task List view for Android using Jetpack Compose, referencing design tokens and stitch/task_list/code.html.
+- `49b045c0` feat(scaffold_presentation_android_design_system): Scaffold the Android Design System components and theme using Jetpack Compose, referencing design tokens.
+- `c3f3de85` feat(scaffold_android_app_entry_point): Scaffold the main Application class for the Jetpack Compose Android application.
+- `fb0a03d1` feat(scaffold_infrastructure_fastapi_app): Scaffold the base FastAPI application.
+- `36e84969` feat(test_ios_ui_components): Write unit tests for the iOS SwiftUI UI components.
+- `8feff4e0` feat(implement_focus_mode_view_ios): Implement the Focus Mode view for iOS using SwiftUI, referencing design tokens and stitch/focus_mode/code.html.
+- `8196c779` feat(implement_task_editor_view_ios): Implement the Task Editor view for iOS using SwiftUI, referencing design tokens and stitch/task_editor/code.html.
+- `846183b4` feat(implement_dashboard_view_ios): Implement the Dashboard view for iOS using SwiftUI, referencing design tokens and stitch/dashboard/code.html.
+- `e5cee335` feat(implement_calendar_view_ios): Implement the Calendar view for iOS using SwiftUI, referencing design tokens and stitch/calendar_view/code.html.
+- `99f60096` feat(implement_productivity_stats_view_ios): Implement the Productivity Stats view for iOS using SwiftUI, referencing design tokens and stitch/productivity_stats/code.html.
+- `4a46edfc` feat(implement_task_list_view_ios): Implement the Task List view for iOS using SwiftUI, referencing design tokens and stitch/task_list/code.html.
+- `4ef55b3d` feat(scaffold_infrastructure_database_config): Scaffold database configuration for PostgreSQL and CoreData/Room.
+- `db0e7856` feat(scaffold_presentation_ios_design_system): Scaffold the iOS Design System components and theme using SwiftUI, referencing design tokens.
+- `82589597` feat(setup_ci_cd): Set up basic CI/CD pipeline configuration (e.g., GitHub Actions).
+- `7ec56829` feat(scaffold_infrastructure_repositories): Scaffold base repository interfaces.
+- `628614e0` feat(scaffold_application_use_cases): Scaffold base use case interfaces/abstract classes.
+- `bf0c126d` feat(scaffold_ios_app_entry_point): Scaffold the main App struct for the SwiftUI iOS application.
+- `a1b93dca` feat(test_fastapi_routes): Write integration tests for the FastAPI backend routes.
+- `db81fb8a` feat(document_architecture): Document the Clean Architecture and feature slicing approach.
+- `7ab11932` feat(document_readme): Create a README.md file with project overview and setup instructions.
+- `088ef7c8` feat(scaffold_domain_models): Scaffold core domain models (e.g., Task, User, Project).
+- `92dc7d62` feat(scaffold_android_main_activity): Scaffold the MainActivity for the Android application.
+- `d9fcde9f` feat(scaffold_ios_app_delegate): Scaffold the AppDelegate for the iOS application.
+- `9ccd3330` feat(scaffold_flyio_config): Create Fly.io configuration files for deployment.
+- `cc926356` feat(scaffold_dockerfile): Create a Dockerfile for the FastAPI backend.
+- `a9a187e4` feat(test_infrastructure_repositories): Write unit tests for the infrastructure repository implementations.
+- `85acc639` feat(test_application_use_cases): Write unit tests for the application use cases.
+- `39c1d682` feat(test_domain_models): Write unit tests for the domain models.
+- `3cfa7637` feat(implement_database_migrations): Implement initial database migrations for PostgreSQL.
+- `9c6c72eb` feat(implement_fastapi_routes): Implement basic CRUD routes for tasks in the FastAPI backend.
+- `01facc8e` feat(scaffold_project_structure): Create the base project directory structure following Clean Architecture and feature slicing.
+- `0a282e17` chore: initial CodeDNA scaffold

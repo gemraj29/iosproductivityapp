@@ -1,0 +1,6 @@
+{
+  "task_id": "setup_ci_cd",
+  "description": "Set up basic CI/CD pipeline configuration (e.g., GitHub Actions).",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

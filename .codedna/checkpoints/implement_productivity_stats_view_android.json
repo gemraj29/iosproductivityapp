@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_productivity_stats_view_android",
+  "description": "Implement the Productivity Stats view for Android using Jetpack Compose, referencing design tokens and stitch/productivity_stats/code.html.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

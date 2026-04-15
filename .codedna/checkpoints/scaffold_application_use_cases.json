@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_application_use_cases",
+  "description": "Scaffold base use case interfaces/abstract classes.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

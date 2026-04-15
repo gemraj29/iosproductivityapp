@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_domain_models",
+  "description": "Scaffold core domain models (e.g., Task, User, Project).",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_presentation_ios_design_system",
+  "description": "Scaffold the iOS Design System components and theme using SwiftUI, referencing design tokens.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

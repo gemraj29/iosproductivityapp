@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_presentation_android_design_system",
+  "description": "Scaffold the Android Design System components and theme using Jetpack Compose, referencing design tokens.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

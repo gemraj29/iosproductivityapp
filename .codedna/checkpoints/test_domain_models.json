@@ -1,0 +1,6 @@
+{
+  "task_id": "test_domain_models",
+  "description": "Write unit tests for the domain models.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

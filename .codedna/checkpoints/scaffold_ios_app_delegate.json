@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_ios_app_delegate",
+  "description": "Scaffold the AppDelegate for the iOS application.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

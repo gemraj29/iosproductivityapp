@@ -1,0 +1,6 @@
+{
+  "task_id": "test_ios_ui_components",
+  "description": "Write unit tests for the iOS SwiftUI UI components.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

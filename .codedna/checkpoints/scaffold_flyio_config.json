@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_flyio_config",
+  "description": "Create Fly.io configuration files for deployment.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

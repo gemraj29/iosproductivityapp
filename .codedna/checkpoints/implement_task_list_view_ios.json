@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_task_list_view_ios",
+  "description": "Implement the Task List view for iOS using SwiftUI, referencing design tokens and stitch/task_list/code.html.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

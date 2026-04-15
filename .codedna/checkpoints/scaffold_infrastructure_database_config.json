@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_infrastructure_database_config",
+  "description": "Scaffold database configuration for PostgreSQL and CoreData/Room.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

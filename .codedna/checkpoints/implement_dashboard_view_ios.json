@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_dashboard_view_ios",
+  "description": "Implement the Dashboard view for iOS using SwiftUI, referencing design tokens and stitch/dashboard/code.html.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

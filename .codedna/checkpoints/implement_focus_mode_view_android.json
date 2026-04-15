@@ -1,0 +1,6 @@
+{
+  "task_id": "implement_focus_mode_view_android",
+  "description": "Implement the Focus Mode view for Android using Jetpack Compose, referencing design tokens and stitch/focus_mode/code.html.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

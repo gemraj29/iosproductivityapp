@@ -1,0 +1,6 @@
+{
+  "task_id": "scaffold_project_structure",
+  "description": "Create the base project directory structure following Clean Architecture and feature slicing.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

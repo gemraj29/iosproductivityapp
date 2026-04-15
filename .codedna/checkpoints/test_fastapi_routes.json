@@ -1,0 +1,6 @@
+{
+  "task_id": "test_fastapi_routes",
+  "description": "Write integration tests for the FastAPI backend routes.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}

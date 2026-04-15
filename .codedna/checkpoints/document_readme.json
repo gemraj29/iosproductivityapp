@@ -1,0 +1,6 @@
+{
+  "task_id": "document_readme",
+  "description": "Create a README.md file with project overview and setup instructions.",
+  "system_tokens": 446,
+  "stage": "pre_llm"
+}
