@@ -4,7 +4,12 @@ import SwiftUI
 struct iOSProductivityApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Placeholder for the main dashboard view.
+            // This will be replaced with the actual DashboardView
+            // once it's implemented.
+            Text("Welcome to iOSProductivity!")
+                .font(.largeTitle)
+                .foregroundColor(.primary)
         }
     }
 }
