@@ -1,6 +1,6 @@
-```python
 from sqlalchemy import Column, Integer, String, Date, Boolean
 from infrastructure.backend.db.database import Base
+
 
 class TaskModel(Base):
     __tablename__ = "tasks"
@@ -10,4 +10,3 @@ class TaskModel(Base):
     description = Column(String, nullable=True)
     due_date = Column(Date, nullable=True)
     is_completed = Column(Boolean, default=False)
-```

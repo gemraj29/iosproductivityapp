@@ -1,19 +1,34 @@
-import asyncio
+import os
 from logging.config import fileConfig
+from pathlib import Path
 
+from dotenv import load_dotenv
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
 
+# Load .env from the project root (four levels up from this file)
+_root = Path(__file__).resolve().parents[4]
+load_dotenv(_root / ".env")
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
 
-# Interpret the config file for Python logging.
-# This line sets up loggers basically.
+# Override sqlalchemy.url from DATABASE_URL env var, converting asyncpg → psycopg2
+_db_url = os.getenv("DATABASE_URL", "")
+_db_url = _db_url.replace("postgresql+asyncpg://", "postgresql://")
+if _db_url:
+    config.set_main_option("sqlalchemy.url", _db_url)
+
+# Only run fileConfig if the ini file has a [loggers] section
+import configparser as _cp
 if config.config_file_name is not None:
-    fileConfig(config.config_file_name)
+    _parser = _cp.ConfigParser()
+    _parser.read(config.config_file_name)
+    if _parser.has_section("loggers"):
+        fileConfig(config.config_file_name)
 
 # add your model's MetaData object here
 # for 'autogenerate' support
@@ -74,12 +89,4 @@ def run_migrations_online() -> None:
 if context.is_offline_mode():
     run_migrations_offline()
 else:
-    # If running online, ensure the event loop is running
-    # This is necessary for async operations within Alembic
-    try:
-        loop = asyncio.get_running_loop()
-    except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-
-    loop.run_until_complete(asyncio.to_thread(run_migrations_online))
+    run_migrations_online()

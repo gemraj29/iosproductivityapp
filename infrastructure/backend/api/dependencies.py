@@ -1,6 +1,5 @@
-```python
 from infrastructure.backend.db.database import SessionLocal
-from sqlalchemy.orm import Session
+
 
 def get_db():
     db = SessionLocal()
@@ -8,4 +7,3 @@ def get_db():
         yield db
     finally:
         db.close()
-```

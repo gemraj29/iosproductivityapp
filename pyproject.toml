@@ -30,3 +30,6 @@ dev = [
     "ruff>=0.3.0",
     "factory-boy>=3.3.0",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
