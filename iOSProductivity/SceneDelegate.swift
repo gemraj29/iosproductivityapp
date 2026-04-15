@@ -1,49 +1,58 @@
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UI for the scene.
-        // If using a storyboard, the UI is automatically created and attached using
-        // the storyboard's reference to the scene.
-        // This automatically uses the Storyboard file name "LaunchScreen.storyboard"
+        // Use this method to optionally configure and attach the UI to the
+        // provided UIWindowScene.
+        // If using a storyboard, the UI is automatically created and attached
+        // to the scene.
+        // This property will be nil if the scene is being discarded later.
 
-        // If you do not want to use a storyboard, replace the line below
-        // with your code like this:
-        // let contentView = ContentView()
-        // window?.rootViewController = UIHostingController(rootView: contentView)
+        // Create the SwiftUI view that provides the window contents.
+        let contentView = ContentView()
 
-        guard let _ = (scene as? UIWindowScene) else { return }
+        // Use a UIHostingController as window root view controller.
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
-        // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect at a later time. Give up loading of any resources that were not loaded into the current session.
+        // This occurs shortly after the scene enters the background, or when its
+        // session is otherwise discarded. If the scene was previously in the
+        // background, optionally re-create the scene with the same state information
+        // to launch it back into a foreground state.
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this event to restart any tasks that were paused (or not started) when the scene was inactive.
+        // Called when the scene has moved from the background to the foreground.
+        // Use this method to undo any changes made on entering the background.
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
-        // Use this event to pause the existing apps, save data, and restart any tasks that were paused (or not started) when the scene was inactive.
+        // Called when the scene is about to move from the foreground to the background.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down
+        // OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on the scene entered the background.
+        // Use this method to undo the changes made on entering the background.
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
-        // Use this method to save data, release shared resources, and store enough scene-specific state information
-        // to restore the scene back to its current state.
+        // Use this method to save data, release shared resources, and invalidate
+        // timers that were not needed when the app was running in the background.
+        // If there's an upcoming scene transition, you can save the state of the
+        // scene here.
     }
 }
